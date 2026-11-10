@@ -1,0 +1,17 @@
+INFO     common.recordlog:conftest.py:23 -----------------接口测试开始---------------------
+INFO     common.recordlog:sendrequests.py:32 接口名称：集团分配物流公司
+INFO     common.recordlog:sendrequests.py:33 接口请求地址：http://127.0.0.1:8787/api/order/pc/order/assign
+INFO     common.recordlog:sendrequests.py:34 测试用例名称：集团分配物流公司
+INFO     common.recordlog:sendrequests.py:35 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+INFO     common.recordlog:sendrequests.py:36 cookies：{'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1NDkxNSwianRpIjoiNzYxMjA4OTgtMTY4MS00M2IyLWE5M2QtNjkzNTMxYmUxYjJjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1NDkxNSwiZXhwIjoxNjg5OTU1ODE1fQ.zF2cb9n4RdOSvqPxfyrOZOxZCV17H_PyA9n1_AMbWAg'}
+INFO     common.recordlog:sendrequests.py:45 请求参数：{'json': {'orderId': 'DD20230721233445201', 'orgId': '4140913758110176843'}}
+INFO     common.recordlog:sendrequests.py:26 接口返回信息：{
+  "code": 20000,
+  "data": true,
+  "message": "操作成功"
+}
+
+INFO     common.recordlog:assertions.py:90 yaml文件的预期结果：[{'contains': {'message': '操作成功'}}]
+INFO     common.recordlog:assertions.py:39 字符串包含断言成功：预期结果-->操作成功；实际结果-->操作成功
+INFO     common.recordlog:assertions.py:109 测试成功
+INFO     common.recordlog:conftest.py:25 -----------------接口测试结束---------------------

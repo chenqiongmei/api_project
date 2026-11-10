@@ -1,0 +1,4 @@
+INFO     common.c_recordlog:conftest.py:17 ---------接口测试开始---------
+INFO     common.c_recordlog:test_login.py:43 获取到的接口地址：http://127.0.0.1:8787/dar/user/login
+INFO     common.c_recordlog:test_login.py:46 获取到的接口方法：post
+INFO     common.c_recordlog:test_login.py:51 获取到的接口参数：{'user_name': 'test01', 'passwd': 'admin123', 't': '${get_stamp_time()}'}

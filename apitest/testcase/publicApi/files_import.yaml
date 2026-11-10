@@ -1,0 +1,12 @@
+- baseInfo:
+    api_name: 报警查询
+    url: /monitor/blockVehicle/importExcel
+    method: post
+    header:
+      token: ${get_extract_data(token)}
+  testCase:
+    - case_name: 导入车辆
+      files:
+        file: ./data/heimingdan_online.xlsx
+      validation:
+        - contains: { 'message': 'success' }

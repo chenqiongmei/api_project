@@ -1,0 +1,44 @@
+INFO     common.recordlog:sendrequests.py:32 接口名称：用户登录
+INFO     common.recordlog:sendrequests.py:33 接口请求地址：http://127.0.0.1:8787/dar/user/login
+INFO     common.recordlog:sendrequests.py:34 测试用例名称：用户名和密码正确登录验证
+INFO     common.recordlog:sendrequests.py:35 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+INFO     common.recordlog:sendrequests.py:36 cookies：None
+INFO     common.recordlog:sendrequests.py:42 请求参数：{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+INFO     common.recordlog:sendrequests.py:25 cookie：{'Cookie': {'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1NDkxNSwianRpIjoiNzYxMjA4OTgtMTY4MS00M2IyLWE5M2QtNjkzNTMxYmUxYjJjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1NDkxNSwiZXhwIjoxNjg5OTU1ODE1fQ.zF2cb9n4RdOSvqPxfyrOZOxZCV17H_PyA9n1_AMbWAg'}}
+INFO     common.recordlog:sendrequests.py:26 接口返回信息：{
+  "error_code": null,
+  "msg": "登录成功",
+  "msg_code": 200,
+  "token": "ffe611F6f4854d4f6faca13Df8268",
+  "userId": "5066477269396223658"
+}
+
+INFO     common.recordlog:apiutil.py:146 提取接口的返回值：
+INFO     common.recordlog:apiutil.py:146 提取接口的返回值：
+INFO     common.recordlog:assertions.py:90 yaml文件的预期结果：[{'contains': {'msg': '登录成功'}}]
+INFO     common.recordlog:assertions.py:39 字符串包含断言成功：预期结果-->登录成功；实际结果-->登录成功
+INFO     common.recordlog:assertions.py:109 测试成功
+INFO     common.recordlog:conftest.py:23 -----------------接口测试开始---------------------
+INFO     common.recordlog:sendrequests.py:32 接口名称：获取物料信息
+INFO     common.recordlog:sendrequests.py:33 接口请求地址：http://127.0.0.1:8787/api/order/customer/orderPlan/getMaterial
+INFO     common.recordlog:sendrequests.py:34 测试用例名称：获取物料信息
+INFO     common.recordlog:sendrequests.py:35 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+INFO     common.recordlog:sendrequests.py:36 cookies：{'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1NDkxNSwianRpIjoiNzYxMjA4OTgtMTY4MS00M2IyLWE5M2QtNjkzNTMxYmUxYjJjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1NDkxNSwiZXhwIjoxNjg5OTU1ODE1fQ.zF2cb9n4RdOSvqPxfyrOZOxZCV17H_PyA9n1_AMbWAg'}
+INFO     common.recordlog:sendrequests.py:26 接口返回信息：{
+  "code": 20000,
+  "data": true,
+  "material": [
+    "1676511586856882178",
+    "1676511586856882134",
+    "1676511524756882178",
+    "1676590766856882178",
+    "1676511586812182178"
+  ],
+  "message": "操作成功"
+}
+
+INFO     common.recordlog:apiutil.py:175 json提取到参数：{'materialId': ['1676511586856882178', '1676511586856882134', '1676511524756882178', '1676590766856882178', '1676511586812182178']}
+INFO     common.recordlog:assertions.py:90 yaml文件的预期结果：[{'contains': {'message': '操作成功'}}]
+INFO     common.recordlog:assertions.py:39 字符串包含断言成功：预期结果-->操作成功；实际结果-->操作成功
+INFO     common.recordlog:assertions.py:109 测试成功
+INFO     common.recordlog:conftest.py:25 -----------------接口测试结束---------------------

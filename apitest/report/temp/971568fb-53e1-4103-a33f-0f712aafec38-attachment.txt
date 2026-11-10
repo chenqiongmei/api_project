@@ -1,0 +1,19 @@
+INFO     common.recordlog:conftest.py:23 -----------------接口测试开始---------------------
+INFO     common.recordlog:sendrequests.py:32 接口名称：货主下单
+INFO     common.recordlog:sendrequests.py:33 接口请求地址：http://127.0.0.1:8787/api/order/customer/orderPlan/create
+INFO     common.recordlog:sendrequests.py:34 测试用例名称：货主下单
+INFO     common.recordlog:sendrequests.py:35 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+INFO     common.recordlog:sendrequests.py:36 cookies：{'access_token_cookie': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTk1NDkxNSwianRpIjoiNzYxMjA4OTgtMTY4MS00M2IyLWE5M2QtNjkzNTMxYmUxYjJjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImV4YW1wbGVfdXNlciIsIm5iZiI6MTY4OTk1NDkxNSwiZXhwIjoxNjg5OTU1ODE1fQ.zF2cb9n4RdOSvqPxfyrOZOxZCV17H_PyA9n1_AMbWAg'}
+INFO     common.recordlog:sendrequests.py:45 请求参数：{'json': {'orderInfo': {'template': 'define', 'urgentType': 2, 'cusName': '总仓', 'orderType': 1, 'charter': 2, 'planType': 1, 'transStartTime': '2023-07-21 23:55:16', 'transEndTime': '2023-07-16 10:38:58', 'orderMark': '货主备注', 'cusId': 1661242770195464193}, 'orderCapacityList': [{'materialCategoryId': '1676511586812182178', 'materialCategory': '粮食', 'materialName': '小麦', 'materialUnit': 'KG', 'materialUnitId': 1660891402561581058, 'settlementUnit': 'KG', 'syncMaterialId': 4, 'materialId': 1661349087048306690, 'sendCusId': 1661663745663741954, 'sendAdrName': '长宁县五谷粮食购销有限责任公司'}]}}
+INFO     common.recordlog:sendrequests.py:26 接口返回信息：{
+  "code": 20000,
+  "data": true,
+  "message": "操作成功",
+  "orderNo": "DD20230721233445201"
+}
+
+INFO     common.recordlog:apiutil.py:146 提取接口的返回值：
+INFO     common.recordlog:assertions.py:90 yaml文件的预期结果：[{'contains': {'message': '操作成功'}}]
+INFO     common.recordlog:assertions.py:39 字符串包含断言成功：预期结果-->操作成功；实际结果-->操作成功
+INFO     common.recordlog:assertions.py:109 测试成功
+INFO     common.recordlog:conftest.py:25 -----------------接口测试结束---------------------

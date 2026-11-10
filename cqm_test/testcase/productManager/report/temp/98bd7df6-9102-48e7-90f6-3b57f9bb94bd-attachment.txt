@@ -1,0 +1,1 @@
+INFO     common.c_recordlog:conftest.py:20 ---------接口测试结束 ---------

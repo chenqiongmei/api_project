@@ -1,0 +1,71 @@
+#① 冒号后必须跟 空格；
+#② 大小写敏感；
+#③ 用缩进表示层级，缩进空格数目无影响，只需要左侧对齐
+#④ - 表示list
+
+#api_name: 登录接口
+#
+#test_case:
+#  case1: 有效登录
+#  case2: 无效登录
+#  data:
+#    - data2
+#    - data3
+
+- baseInfo:
+    api_name: 用户登录
+    url: /dar/user/login
+    method: post
+    header:
+      Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+#      token: ${get_extract_data(product_id,0)}
+      token: ${get_extract_data(Token)}
+#      token: ${get_extract_data(cookie,session)}
+
+
+  testCase:
+    - case_name: 用户名和密码正确登录
+      title: 登录成功-用户名密码正确  # 新增
+      data:
+        user_name: test01
+        passwd: admin123
+        t: ${get_stamp_time()}
+#        passwd: ${md5_params('admin123')}
+      validation:
+        - contains: {'error_code':none}
+        - contains: { 'msg': '登录成功' }
+        - contains: {'status_code':200}
+        - eq: {'code': 200}
+        - ne: {'code': 200}
+        - db: select * from tb
+      extract:
+#        token: '"token":"(.*?)"'
+        token: $.token
+        userId: $.userId
+
+    - case_name: 用户名或密码错误
+      title: 登录失败-用户名或密码错误  # 新增
+      data:
+        user_name: test02
+        passwd: admin456
+      validation:
+        - contains: { 'msg': '登录失败,用户名或密码错误' }
+        - eq: { 'code': 200 }
+      extract_list:
+        token: $.token
+        userId: $.userId
+
+    - case_name: 用户名或密码不存在
+      json:
+        user_name: test02
+        passwd: admin456
+
+
+
+
+
+
+
+
+
+

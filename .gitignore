@@ -36,3 +36,6 @@ allure-report/
 reports/
 .idea/
 .DS_Store
+venv/
+__pycache__/
+*.pyc

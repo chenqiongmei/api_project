@@ -25,3 +25,14 @@ reports/
 .idea/
 .vscode/
 .DS_Store
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.zip
+.pytest_cache/
+allure-results/
+allure-report/
+reports/
+.idea/
+.DS_Store

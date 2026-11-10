@@ -5,3 +5,23 @@ __pycache__/
 report/temp/
 *.log
 venv/
+
+# 忽略大压缩包
+*.zip
+
+# Python 虚拟环境
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Pytest / Allure 报告与缓存
+.pytest_cache/
+allure-results/
+allure-report/
+reports/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store

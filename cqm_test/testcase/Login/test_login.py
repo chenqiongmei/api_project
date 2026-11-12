@@ -112,7 +112,7 @@ class TestLogin:
         # allure.dynamic.title(params.get('title', '默认标题'))  # 动态取中文
         RequestsBase().specification_yaml(params)
 
-# # 方式一：仅运行当前文件
+# # 方式一：仅运行当前文件git
 # if __name__ == '__main__':
 #     # 仅运行当前文件，并指定 allure 输出目录
 #     pytest.main(['-vs', __file__, '--alluredir=./report/temp', '--clean-alluredir'])
